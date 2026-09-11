@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#0b1020">
+  <title>کادوی مانی 🎂</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+  <div class="stars" id="stars"></div>
+
+  <main class="app">
+    <section class="screen active" id="welcome">
+      <div class="hero-icon">🎁</div>
+      <div class="eyebrow">یه سورپرایز کوچیک برای تو</div>
+      <h1>مانی داداش<br><span>تولدت مبارک 🎂</span></h1>
+      <p>یه چیز کوچیک برای تو آماده کردم<br>ببین آخرش چی منتظرته 😏</p>
+      <button class="primary-btn" data-next="q1">بزن بریم <span>←</span></button>
+    </section>
+
+    <section class="screen" id="q1">
+      <div class="question-no">سوال اول</div>
+      <h2>اگه بخوای با یکی بری کیش و ۳۰ روز بمونی کیو میبری؟ 🏝️</h2>
+      <div class="answers">
+        <button class="answer" data-msg="درسته ولی من چییی 🥲">رامان</button>
+        <button class="answer" data-msg="درسته ولی من چییی 🥲">رایان</button>
+        <button class="answer" data-msg="درسته ولی من چییی 🥲">مهدی</button>
+        <button class="answer" data-msg="درسته ولی من چییی 🥲">شخص دیگه ای</button>
+      </div>
+      <div class="feedback"></div>
+    </section>
+
+    <section class="screen" id="q2">
+      <div class="question-no">سوال دوم</div>
+      <h2>دوست داری توی سال جدید به چه هدفی برسی؟ 🎯</h2>
+      <div class="answers">
+        <button class="answer" data-msg="به همشون میرسی داداش ❤️‍🔥">مهاجرت</button>
+        <button class="answer" data-msg="به همشون میرسی داداش ❤️‍🔥">خرید ماشین</button>
+        <button class="answer" data-msg="به همشون میرسی داداش ❤️‍🔥">خرید خونه</button>
+        <button class="answer" data-msg="به همشون میرسی داداش ❤️‍🔥">عشق و حال</button>
+      </div>
+      <div class="feedback"></div>
+    </section>
+
+    <section class="screen" id="q3">
+      <div class="question-no">سوال سوم</div>
+      <h2>به عنوان تنبیه فاضل برای مریض کردن بچه ها تو روز تولدت چیکارش میکنی؟ 😈</h2>
+      <div class="answers">
+        <button class="answer" data-msg="کاش بوس میگرفتی ولی 🥲">ازش بوس میگیری</button>
+        <button class="answer" data-msg="کاش بوس میگرفتی ولی 🥲">باهاش مچ میندازی و بازنده یه چک</button>
+        <button class="answer" data-msg="کاش بوس میگرفتی ولی 🥲">۴ بار بهش فحش میدی</button>
+        <button class="answer" data-msg="کاش بوس میگرفتی ولی 🥲">میبخشیش</button>
+      </div>
+      <div class="feedback"></div>
+    </section>
+
+    <section class="screen" id="q4">
+      <div class="question-no">سوال چهارم</div>
+      <h2>توی امسال رو کسی کراش زدی؟ 👀</h2>
+      <div class="answers two">
+        <button class="answer green-answer" data-msg="ای مانیییی 😭❤️">آره</button>
+        <button class="answer red-answer" data-msg="الکی که نمیگی مانی 😭">نه</button>
+      </div>
+      <div class="feedback"></div>
+    </section>
+
+    <section class="screen" id="game">
+      <div class="question-no">مرحله آخر قبل از جایزه</div>
+      <h2>مانی باید هدف ها رو بگیری 🎯</h2>
+      <p class="game-help">در ۱۵ ثانیه حداقل ۱۰ تا هدف رو بگیر</p>
+      <div class="score-row">
+        <span>امتیاز <b id="score">۰</b></span>
+        <span>زمان <b id="time">۱۵</b></span>
+      </div>
+      <div class="game-box" id="gameBox"></div>
+      <button class="primary-btn small" id="startGame">شروع بازی 🚀</button>
+      <div class="game-result"></div>
+    </section>
+
+    <section class="screen" id="final">
+      <div class="confetti" id="confetti"></div>
+      <div class="cake">🎂</div>
+      <div class="eyebrow">ماموریت با موفقیت انجام شد</div>
+      <h1>تبریک تولد<br><span>عمو مانی ❤️</span></h1>
+      <p class="final-text">عشق داداش تولدت مبارک باشه جیگر ❤️<br>امیدوارم امسال به تک تک هدفات برسی<br>و سال خیلی خوبی برات باشه</p>
+      <button class="primary-btn" id="giftBtn">صفحه آخر 🎁</button>
+    </section>
+
+    <section class="screen last" id="last">
+      <div class="music-note">🎵</div>
+      <div class="photo-wrap">
+        <img src="aksmani.PNG" alt="مانی" id="maniPhoto">
+      </div>
+      <h2>تولدت مبارک مانی جان 😂❤️</h2>
+      <p>اینم جایزه اصلی که قرار نبود ببینی 😎</p>
+      <div class="music-status" id="musicStatus">در حال آماده سازی آهنگ 🎶</div>
+      <audio id="birthdayAudio" src="ahangmani.MP3" preload="auto"></audio>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
